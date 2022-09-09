@@ -92,7 +92,7 @@
                     </thead>
                     <tbody class="bg-light text-center">
                         <?
-                    if(count($myRes > 0)){
+                    if(count(array($myRes) > 0)){
                         for($i = 0 ; $i < count($myRes) ; $i++){?>
                         <tr>
                             <td><?= $i + 1; ?></td>

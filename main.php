@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
@@ -29,11 +29,10 @@
                 <div class="pb-2 mt-4 mb-2">
                     <h3><u>ปฏิทินการจองห้อง</u></h3>
                 </div>
-                <div class="form-row" style="background-color:#F0E68C;padding:10px;margin:2px;border: 1px solid black;">
+                <div class="form-row" style="background-color:#F0E68C;padding:10px;margin:2px;">
                     <div class="col-sm-6">
                         <label for="name_room" style='color:#2F4F4F'>ห้องประชุม : </label>
-                        <select class='form-control form-control-sm' style='border: 1px solid darkgrey;'
-                            name='name_room' id='name_room'></select>
+                        <select class='form-control form-control-sm' name='name_room' id='name_room'></select>
                     </div>
                     <div class="text-right col-sm-6">
                         <h4 id="monthAndYear" style='color:#2F4F4F'></h4>
@@ -42,7 +41,7 @@
                     </div>
                 </div>
                 <hr>
-                <table id="calendarTable">
+                <table id="calendarTable" class="table table-bordered">
                 </table>
                 <div id='eventPopUp' hidden>
                     <button id="closeEventBtn">&#10006</button>
@@ -101,6 +100,7 @@ $(document).ready(function() {
             topic: 'หาห้องประชุม',
         },
         success: function(data) {
+            console.log(data)
             option = '';
             if (data.length > 0) {
                 // option +=
