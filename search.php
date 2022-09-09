@@ -30,12 +30,15 @@ else if ($getVal =='เช็คเวลา'){
     $begin = $_POST['begin'];
     $end = $_POST['end'];
     $room_id = $_POST['room_id'];
-    $rs = select("SELECT * FROM reservation 
-                    WHERE `room_id` = '$room_id' 
-                        AND 
-                            ((`begin` BETWEEN '$begin' AND '$end' ) 
-                                OR 
-                                (`end` BETWEEN '$begin' AND '$end'))"
+    $sql = "
+            SELECT * FROM reservation
+                WHERE 
+                    (`begin` <= '$begin' AND '$begin' < `end`)
+                        OR (`begin` < '$end' AND '$end' <= `end`)
+                            OR ('$begin' <= `begin` AND `begin` < '$end')
+                        LIMIT 1
+    ";
+    $rs = select($sql
                                     ,$conn);
     if(count($rs) > 0){
         $rs = $rs;
