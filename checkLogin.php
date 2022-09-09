@@ -3,6 +3,7 @@
 date_default_timezone_set('Asia/Bangkok');
 session_start();
 include 'function.php';
+include './config/userpassDb.php';
 $uname =  strtoupper(trim($_POST['username']));
 $password = strtoupper(trim($_POST['password']));
 
@@ -20,7 +21,7 @@ if($uname != "ADMIN"){
   }
 }
 else{
-    $conn = new mysqli('localhost', 'root' ,'','lab_booking');mysqli_set_charset($conn,"utf8");
+    $conn = new mysqli($hostDb, $userDb ,$passDb,$nameDb);mysqli_set_charset($conn,"utf8");
     if($conn->connect_error) { alert("can't connect db"); } 
     $sql = "SELECT id_card AS ID_CODE, username AS medcode, status_type ,`password` 
                     , CONCAT(TFNAME,' ',TLNAME) AS FULLNAME FROM users 
@@ -40,7 +41,7 @@ else{
     $conn->close();
 }
 if(count($_SESSION) > 0){
-  $conn = new mysqli('localhost', 'root' ,'','lab_booking');mysqli_set_charset($conn,"utf8");
+  $conn = new mysqli($hostDb, $userDb ,$passDb,$nameDb);mysqli_set_charset($conn,"utf8");
   if($conn->connect_error) { alert("can't connect db"); } 
   $sql = "INSERT INTO `log`(medcode,stats) VALUE('".$uname."','1')";
   $conn->query($sql);

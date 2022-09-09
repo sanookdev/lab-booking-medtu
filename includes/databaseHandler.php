@@ -1,8 +1,9 @@
 <?php
 
 // Content of database.php
+include "../config/userpassDb.php";
 
-$mysqliConn = mysqli_connect('localhost', 'root', '', 'lab_booking');
+$mysqliConn = mysqli_connect($hostDb, $userDb ,$passDb,$nameDb);
 // $mysqliConn = mysqli_connect('localhost', 'root', '', 'booking-med');
 
 if (!$mysqliConn){

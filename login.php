@@ -49,12 +49,12 @@
                                 <form action="" id="form_login">
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user" name="email"
-                                            id="email" placeholder="username ( รหัสนักศึกษา )">
+                                            id="email" placeholder="username ( medcode )">
                                         <span class="email-err"></span>
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" name="password"
-                                            id="password" placeholder="password ( เลข 6 หลักหลังบัตรประชาชน )">
+                                            id="password" placeholder="password">
                                         <span class="pass-err"></span>
 
                                     </div>
