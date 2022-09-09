@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
-    <title>ระบบจองห้องประชุม ( แพทย์แผนไทย )</title>
+    <title>ระบบจองห้องประชุม ( งานเทคโนฯ )</title>
 
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
@@ -34,7 +34,7 @@
             <div class="col-xl-10 col-lg-12 col-md-10">
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <h4 class='text-center mt-4'>ระบบจองห้องประชุม</h4><br>
-                    <h6 class='text-center' style="margin-top:-10px">แพทย์แผนไทย</h6>
+                    <h6 class='text-center' style="margin-top:-10px">งานเทคโนโลยีทางการศึกษา</h6>
                     <hr>
                     <center>
                         <div class="col-lg-7">
