@@ -60,7 +60,7 @@
                     <div>
                         <button onclick="window.location.href = 'logout.php'"
                             class="btn btn-sm btn-block btn-danger form-control">
-                            <i class="fa fa-sign-out"></i> ออกจากระบบ
+                            <i class="fa fa-sign-out"></i> Sign Out
                         </button>
                     </div>
                 </div>
