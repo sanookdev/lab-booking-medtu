@@ -297,7 +297,7 @@
                         } else {
                             time_begin = data[0]['begin'].split(' ')[1];
                             time_end = data[0]['end'].split(' ')[1];
-                            // console.log(time_begin + " " + time_end);
+                            console.log(time_begin + " " + time_end);
                             msg =
                                 "<span class = 'error'>!! ไม่สามารถจองช่วงเวลาดังกล่าวได้...</span><br>";
                             msg += "<span class = 'error'>มีผู้จองเวลา : " + time_begin +
@@ -382,7 +382,7 @@
             data['end_date'] = $('input[name=end_date]').val().replace('T', " ");
             data['for'] = $('select[name=for]').val();
             data['phone'] = $('input[name=phone]').val();
-            console.log(data['acs']);
+            // console.log(data['acs']);
             $.ajax({
                 url: "insert.php",
                 method: "POST",
