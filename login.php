@@ -46,20 +46,23 @@
 
                                 <!-- ERROR MESSAGE  -->
                                 <span class="err" id="err"></span>
+                                <form action="" id="form_login">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" name="email"
+                                            id="email" placeholder="username ( รหัสนักศึกษา )">
+                                        <span class="email-err"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user" name="password"
+                                            id="password" placeholder="password ( เลข 6 หลักหลังบัตรประชาชน )">
+                                        <span class="pass-err"></span>
 
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="email" id="email"
-                                        placeholder="username ( รหัสนักศึกษา )">
-                                    <span class="email-err"></span>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control form-control-user" name="password"
-                                        id="password" placeholder="password ( เลข 6 หลักหลังบัตรประชาชน )">
-                                    <span class="pass-err"></span>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-user btn-block">Login</button>
+                                    <!-- <input type="button" class="btn btn-success btn-user btn-block" value="Login"
+                                        id="btn_submit"> -->
+                                </form>
 
-                                </div>
-                                <input type="button" class="btn btn-success btn-user btn-block" value="Login"
-                                    id="btn_submit">
                             </div>
                         </div>
                     </center>
@@ -87,7 +90,8 @@
 
 
         // event after submit login
-        $("#btn_submit").on('click', function() {
+        $("#form_login").on('submit', function(e) {
+            e.preventDefault();
             var username = $("#email").val().trim();
             var password = $("#password").val().trim();
             if ($("#email").first().val() === "") {

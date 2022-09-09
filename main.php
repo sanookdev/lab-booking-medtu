@@ -26,6 +26,13 @@
     <div class="container-fluid">
         <div class="row mt-3">
             <div class="col-lg-10 col-md-10 mb-2 mx-auto">
+                <?
+                    if($_SESSION['MEDCODE'] == 'ADMIN'){
+                        include "dashboard.php";
+                    }
+                
+                
+                ?>
                 <div class="pb-2 mt-4 mb-2">
                     <h3><u>ปฏิทินการจองห้อง</u></h3>
                 </div>
