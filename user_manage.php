@@ -156,7 +156,7 @@ $(document).ready(function() {
         console.log(id);
         if (id != '') {
             $.ajax({
-                url: "select.php",
+                url: "./api/select.php",
                 method: "POST",
                 data: {
                     id: id,

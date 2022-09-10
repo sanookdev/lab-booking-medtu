@@ -1,5 +1,5 @@
  <?php
-    include "config/connect.php";
+    include "../config/connect.php";
     session_start();
     $output = '';
     if ($_POST['topic'] == 'rooms') {

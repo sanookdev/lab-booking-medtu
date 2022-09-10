@@ -22,30 +22,6 @@ else if ($getVal =='ชั้น'){
                     LEFT JOIN building AS b ON b.id = c.building_id WHERE building_id = '$building_id'
                         ORDER BY c.class_no ASC ",$conn);
 }
-else if ($getVal =='หาห้องประชุม'){
-    $rs = select("SELECT name,id,detail FROM rooms",$conn);
-}
-
-else if ($getVal =='เช็คเวลา'){
-    $begin = $_POST['begin'];
-    $end = $_POST['end'];
-    $room_id = $_POST['room_id'];
-    $sql = "
-            SELECT * FROM reservation
-                WHERE 
-                    (`begin` <= '$begin' AND '$begin' < `end`)
-                        OR (`begin` < '$end' AND '$end' <= `end`)
-                            OR ('$begin' <= `begin` AND `begin` < '$end')
-                        LIMIT 1
-    ";
-    $rs = select($sql
-                                    ,$conn);
-    if(count($rs) > 0){
-        $rs = $rs;
-    }else{
-        $rs = 1;
-    }
-}
 
 echo json_encode($rs);
 ?>

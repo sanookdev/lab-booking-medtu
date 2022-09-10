@@ -2,8 +2,8 @@
 // include "config/connect.php";
 date_default_timezone_set('Asia/Bangkok');
 session_start();
-include 'function.php';
-include './config/userpassDb.php';
+include '../function.php';
+include '../config/userpassDb.php';
 $uname =  strtoupper(trim($_POST['username']));
 $password = strtoupper(trim($_POST['password']));
 

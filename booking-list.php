@@ -196,7 +196,7 @@
             console.log(id);
             if (id != '') {
                 $.ajax({
-                    url: "select.php",
+                    url: "./api/select.php",
                     method: "POST",
                     data: {
                         id: id,
@@ -217,10 +217,10 @@
 
         $('.add_data').on('click', function() {
             $.ajax({
-                url: "search.php",
+                url: "./api/informations.php",
                 method: "POST",
                 data: {
-                    topic: 'หาห้องประชุม'
+                    topic: 'searchRooms'
                 },
                 success: function(data) {
                     // console.log(data);
@@ -244,10 +244,10 @@
             })
 
             $.ajax({
-                url: "search.php",
+                url: "./api/informations.php",
                 method: "POST",
                 data: {
-                    topic: 'ใช้สำหรับ'
+                    topic: 'useFor'
                 },
                 success: function(data) {
                     console.log(data);
@@ -279,10 +279,10 @@
 
             if (begin != '' && end != '') {
                 $.ajax({
-                    url: "search.php",
+                    url: "./api/informations.php",
                     method: "POST",
                     data: {
-                        topic: 'เช็คเวลา',
+                        topic: 'checkTimeValidate',
                         begin: begin,
                         end: end,
                         room_id
@@ -321,14 +321,12 @@
             begin = begin.replace('T', ' ');
             end = end.replace('T', ' ');
             room_id = $('#name_room').val();
-            // console.log(begin + ' ' + end);
-
             if (begin != '' && end != '') {
                 $.ajax({
-                    url: "search.php",
+                    url: "./api/informations.php",
                     method: "POST",
                     data: {
-                        topic: 'เช็คเวลา',
+                        topic: 'checkTimeValidate',
                         begin: begin,
                         end: end,
                         room_id

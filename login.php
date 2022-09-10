@@ -103,7 +103,7 @@
             }
             if (username != '' && password != '') {
                 $.ajax({
-                    url: 'checkLogin.php',
+                    url: './api/checkLogin.php',
                     type: 'post',
                     dataType: 'json',
                     data: {
@@ -114,7 +114,7 @@
                         console.log(res);
                         var msg = '';
                         if (res != 0) {
-                            window.location = "main.php";
+                            window.location = "./main.php";
                         } else {
                             msg = "อีเมลล์ หรือ พาสเวิร์ดของท่านไม่ถูกต้อง !";
                             $("#err").html(msg).show();

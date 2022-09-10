@@ -100,11 +100,12 @@ $(document).ready(function() {
 
     // ********************************* autocomplete search 'BUILDING NAME ( ตึก )' ************************************
     option = '';
+
     $.ajax({
-        url: "search.php",
+        url: "./api/informations.php",
         method: "POST",
         data: {
-            topic: 'หาห้องประชุม',
+            topic: 'searchRooms',
         },
         success: function(data) {
             console.log(data)
