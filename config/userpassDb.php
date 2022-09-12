@@ -2,5 +2,5 @@
 $hostDb = "localhost";
 $userDb = "root";
 $passDb = "";
-$nameDb = "techno-booking-medtu";
+$nameDb = "lab_booking";
 ?>

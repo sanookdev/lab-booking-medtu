@@ -1,5 +1,15 @@
 <!-- nav -->
 <?
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if($_SESSION['status_type'] != '1'){
+            exit();
+        }
+
+
+
 
         include "config/connect.php";
         include "function.php";
